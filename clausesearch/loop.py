@@ -173,10 +173,10 @@ def rule_calibrate_abstention(config, d, scores):
     """Parameter search: thresholds that maximise correct abstention within the false-abstention limit."""
     if not d["false_answers"]:
         return None
-    best = scores["best"]
     limit = scores["max_false_abstain_rate"]
-    route_options = sorted({0.0, *scores["route_unanswerable"], *scores["route_answerable"]}) if scores["routed"] else [0.0]
-    score_options = sorted({0.0, *(s for s, _ in best)})
+    route_values = [*scores["route_unanswerable"], *scores["route_answerable"]] if scores["routed"] else []
+    route_options = midpoints(route_values)
+    score_options = midpoints([s for s, _ in scores["best"]])
     choice = None
     for r in route_options:
         for t in score_options:
@@ -192,10 +192,18 @@ def rule_calibrate_abstention(config, d, scores):
     if choice is None:
         return None
     (_, r, t) = choice
-    return ({"abstain": {"min_score": round(t, 4), "route_min_score": round(r, 4)}},
+    # Not rounded: run 2 showed rounding can push a threshold onto queries' exact scores.
+    return ({"abstain": {"min_score": float(t), "route_min_score": float(r)}},
             f"{d['false_answers']} unanswerable train queries still get an answer. Grid search on train over the "
             f"contract-match and passage-score thresholds for the most correct abstentions with false abstention "
             f"<= {limit}.", "calibration")
+
+
+def midpoints(values):
+    """Candidate thresholds halfway between distinct observed scores (plus 0 = off), so a
+    threshold never sits exactly on a score; queries about one contract share a route score."""
+    distinct = sorted(set(values))
+    return [0.0] + [(a + b) / 2 for a, b in zip(distinct, distinct[1:])]
 
 
 RULES = [rule_route_by_title, rule_stem, rule_smaller_chunks, rule_overlap,

@@ -1,11 +1,12 @@
-# Written by clausesearch.loop from run2_iter05.
+# Written by clausesearch.loop from run3_iter06.
 chunking:
   size: 500
   overlap: 250
 retriever: bm25
 top_k: 64
 abstain:
-  min_score: 0.0
+  min_score: 2.951676823042467
+  route_min_score: 22.15751463763246
 name: final
 route_by_title: true
 stem: true

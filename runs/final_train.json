@@ -33,34 +33,35 @@
     },
     "end_to_end": {
       "precision": {
-        "1": 0.24567142857142857,
-        "2": 0.21238565525383707,
-        "4": 0.14362221776218767,
-        "8": 0.09104258247676411,
-        "16": 0.058230688613010353,
-        "32": 0.038876522368140654,
-        "64": 0.02613795884079232
+        "1": 0.2332142857142857,
+        "2": 0.20107613144431327,
+        "4": 0.13531303408871828,
+        "8": 0.08598471700889865,
+        "16": 0.05510477934048781,
+        "32": 0.036772665065242856,
+        "64": 0.02465894851565578
       },
       "recall": {
-        "1": 0.3322142858186325,
-        "2": 0.4161842622999839,
-        "4": 0.5256235278342956,
-        "8": 0.5843576872579423,
-        "16": 0.6743889717614637,
-        "32": 0.7877095841970473,
-        "64": 0.8733000436623295
+        "1": 0.3158276558258078,
+        "2": 0.39528255193872863,
+        "4": 0.4920003023136703,
+        "8": 0.5421775185495201,
+        "16": 0.6250659459101844,
+        "32": 0.7248609823285542,
+        "64": 0.8060605945458463
       }
     },
-    "false_abstain_rate": 0,
-    "correct_abstain_rate": 0.13793103448275862,
+    "false_abstain_rate": 0.07857142857142857,
+    "correct_abstain_rate": 0.5862068965517241,
     "labels": {
-      "hit": 82,
-      "wrong_section": 48,
-      "partial_span": 10,
-      "false_answer": 25,
-      "correct_abstain": 4
+      "hit": 76,
+      "false_abstain": 11,
+      "partial_span": 9,
+      "wrong_section": 44,
+      "false_answer": 12,
+      "correct_abstain": 17
     },
-    "seconds_per_query": 0.002222163313608851
+    "seconds_per_query": 0.002848577514776792
   },
   "rows": [
     {
@@ -148,8 +149,8 @@
     {
       "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; What is the governing law for this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 1,
       "precision": {
         "1": 0.588,
@@ -230,8 +231,8 @@
     {
       "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; Are there any exceptions to competitive restrictions in this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "wrong_section",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 33,
       "precision": {
         "1": 0.0,
@@ -312,8 +313,8 @@
     {
       "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; Does this contract include any right of first refusal, right of first offer, or right of first negotiation?",
       "answerable": true,
-      "abstain": false,
-      "label": "wrong_section",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 18,
       "precision": {
         "1": 0.0,
@@ -401,8 +402,8 @@
     {
       "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; How is intellectual property ownership assigned in this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 3,
       "precision": {
         "1": 0.0,
@@ -483,8 +484,8 @@
     {
       "query": "Consider the Cooperation Agreement between HPIL ENERGYTECH Inc. and GINARES GROUP AG for Renewable Energy Projects; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "wrong_section",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 32,
       "precision": {
         "1": 0.0,
@@ -818,8 +819,8 @@
     {
       "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 1,
       "precision": {
         "1": 0.68,
@@ -900,8 +901,8 @@
     {
       "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; What licenses are granted under this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 1,
       "precision": {
         "1": 0.476,
@@ -4484,8 +4485,8 @@
     {
       "query": "Consider the Gas Franchise Agreement between the Town of Vinton and Roanoke Gas Company; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 7,
       "precision": {
         "1": 0.0,
@@ -8204,8 +8205,8 @@
     {
       "query": "Consider the Business Affiliate Agreement between Dr. George D. Green and UNION DENTAL CORP.; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "hit",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 4,
       "precision": {
         "1": 0.0,
@@ -9230,8 +9231,8 @@
     {
       "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "wrong_section",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 9,
       "precision": {
         "1": 0.0,
@@ -11336,8 +11337,8 @@
     {
       "query": "Consider the Amendment and Termination of Joint Venture Agreement between Veoneer and Nissin Parties; What is the expiration date of this contract?",
       "answerable": true,
-      "abstain": false,
-      "label": "partial_span",
+      "abstain": true,
+      "label": "false_abstain",
       "first_hit_rank": 5,
       "precision": {
         "1": 0.0,
@@ -11960,8 +11961,8 @@
       "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; What is the governing law for this contract?",
       "answerable": false,
       "category": "missing_clause",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt",
@@ -12058,8 +12059,8 @@
       "query": "Consider the Gas Franchise Agreement between the Town of Vinton and Roanoke Gas Company; What is the governing law for this contract?",
       "answerable": false,
       "category": "missing_clause",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/RgcResourcesInc_20151216_8-K_EX-10.3_9372751_EX-10.3_Franchise Agreement.txt",
@@ -12156,8 +12157,8 @@
       "query": "Consider the Sponsorship Agreement between Jacksonville Jaguars, LLC and The ARC Group, Inc.; Is there an anti-assignment clause in this contract?",
       "answerable": false,
       "category": "missing_clause",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ArcGroupInc_20171211_8-K_EX-10.1_10976103_EX-10.1_Sponsorship Agreement.txt",
@@ -12205,8 +12206,8 @@
       "query": "Consider the Non-Competition Agreement and Right of First Offer between Glamis Gold Ltd. and Western Copper Corporation; Is there a cap on liability under this contract?",
       "answerable": false,
       "category": "missing_clause",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
@@ -12254,8 +12255,8 @@
       "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; Is there a cap on liability under this contract?",
       "answerable": false,
       "category": "missing_clause",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
@@ -12891,8 +12892,8 @@
       "query": "Consider the Multiple LINAC and Multi-Modality Distributor Agreement of Accuray Incorporated; Is there an anti-assignment clause in this contract?",
       "answerable": false,
       "category": "contract_not_indexed",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
@@ -12940,8 +12941,8 @@
       "query": "Consider the Services Agreement between a confidential provider and Telcostar Pte, Ltd.; Is there a cap on liability under this contract?",
       "answerable": false,
       "category": "contract_not_indexed",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
@@ -13038,8 +13039,8 @@
       "query": "Consider the Music Synchronization License between Raga Records and Kestrel Lane Productions; What is the expiration date of this contract?",
       "answerable": false,
       "category": "contract_not_indexed",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
@@ -13087,8 +13088,8 @@
       "query": "What is the statutory limitation period for breach of contract claims in India?",
       "answerable": false,
       "category": "off_topic",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
@@ -13136,8 +13137,8 @@
       "query": "How do I register a trademark for the title of a new show?",
       "answerable": false,
       "category": "off_topic",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
@@ -13185,8 +13186,8 @@
       "query": "Which of our agreements were signed in 2023?",
       "answerable": false,
       "category": "off_topic",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
@@ -13234,8 +13235,8 @@
       "query": "What GST rate applies to OTT subscription fees?",
       "answerable": false,
       "category": "off_topic",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
@@ -13283,8 +13284,8 @@
       "query": "What is the difference between a licence and an assignment of copyright?",
       "answerable": false,
       "category": "off_topic",
-      "abstain": false,
-      "label": "false_answer",
+      "abstain": true,
+      "label": "correct_abstain",
       "top_passages": [
         {
           "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",

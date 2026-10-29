@@ -1,4 +1,8 @@
-from clausesearch.loop import bootstrap_win_rate, decide, merge
+from clausesearch.loop import bootstrap_win_rate, decide, merge, midpoints
+
+
+def test_thresholds_fall_between_observed_scores():
+    assert midpoints([3.0, 1.0, 3.0, 2.0]) == [0.0, 1.5, 2.5]
 
 OBJECTIVE = {
     "acceptance": {"min_gain": 0.01, "bootstrap_resamples": 200, "bootstrap_win_rate": 0.9},
