@@ -1,0 +1,5462 @@
+{
+  "summary": {
+    "config": "final",
+    "split": "test",
+    "n_answerable": 54,
+    "n_unanswerable": 16,
+    "label_k": 8,
+    "retrieval_only": {
+      "precision": {
+        "1": 0.25377777777777777,
+        "2": 0.2193641975308642,
+        "4": 0.1516874779541446,
+        "8": 0.10679329682663016,
+        "16": 0.06527340136787628,
+        "32": 0.041110749317739996,
+        "64": 0.025665086109357197
+      },
+      "recall": {
+        "1": 0.3227765409498298,
+        "2": 0.42778693541696333,
+        "4": 0.5154480380846359,
+        "8": 0.6321714529758349,
+        "16": 0.7181272720202104,
+        "32": 0.7976053274381728,
+        "64": 0.8398910211781951
+      },
+      "budget_recall": {
+        "500": 0.3227765409498298,
+        "1000": 0.42778693541696333,
+        "2000": 0.5154480380846359,
+        "4000": 0.6321714529758349
+      }
+    },
+    "end_to_end": {
+      "precision": {
+        "1": 0.25377777777777777,
+        "2": 0.2193641975308642,
+        "4": 0.1516874779541446,
+        "8": 0.10679329682663016,
+        "16": 0.06490639800087292,
+        "32": 0.0398076539518427,
+        "64": 0.0248055662066716
+      },
+      "recall": {
+        "1": 0.3227765409498298,
+        "2": 0.42778693541696333,
+        "4": 0.5154480380846359,
+        "8": 0.6321714529758349,
+        "16": 0.7059675219086531,
+        "32": 0.7484085402895785,
+        "64": 0.7843354656226396
+      }
+    },
+    "false_abstain_rate": 0.05555555555555555,
+    "correct_abstain_rate": 0.5,
+    "labels": {
+      "false_abstain": 3,
+      "hit": 36,
+      "wrong_section": 10,
+      "partial_span": 5,
+      "false_answer": 8,
+      "correct_abstain": 8
+    },
+    "seconds_per_query": 0.002619050000014665
+  },
+  "rows": [
+    {
+      "query": "Consider the Service Agreement between BicycleTX Ltd and Nigel Crockett for Chief Business Officer Position; What is the expiration date of this contract?",
+      "answerable": true,
+      "abstain": true,
+      "label": "false_abstain",
+      "first_hit_rank": 16,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.019818181818181818,
+        "32": 0.009478260869565217,
+        "64": 0.008
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.6566265060240963,
+        "32": 0.6566265060240963,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            693,
+            859
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            28500,
+            29000
+          ],
+          "score": 3.253633817011091
+        },
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            37000,
+            37500
+          ],
+          "score": 3.1843794669540437
+        },
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            28000,
+            28500
+          ],
+          "score": 3.0849859408265847
+        },
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            28750,
+            29250
+          ],
+          "score": 3.0375801889357725
+        },
+        {
+          "file_path": "cuad/BICYCLETHERAPEUTICSPLC_03_10_2020-EX-10.11-SERVICE AGREEMENT.txt",
+          "span": [
+            27750,
+            28250
+          ],
+          "score": 2.881055932396441
+        }
+      ]
+    },
+    {
+      "query": "Consider the Cooperation Agreement between HPIL ENERGYTECH Inc. and GINARES GROUP AG for Renewable Energy Projects; Can this contract be terminated for convenience, and under what conditions?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.328,
+        "2": 0.21866666666666668,
+        "4": 0.10933333333333334,
+        "8": 0.05466666666666667,
+        "16": 0.027333333333333334,
+        "32": 0.0164,
+        "64": 0.009791044776119404
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            18172,
+            18336
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            18000,
+            18500
+          ],
+          "score": 8.951176551084693
+        },
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            18250,
+            18750
+          ],
+          "score": 7.553781651560016
+        },
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            5250,
+            5750
+          ],
+          "score": 5.221514266292576
+        },
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            5500,
+            6000
+          ],
+          "score": 4.992290939679636
+        },
+        {
+          "file_path": "cuad/HPILHOLDING_01_07_2015-EX-99.1-COOPERATION AGREEMENT.txt",
+          "span": [
+            2750,
+            3250
+          ],
+          "score": 3.3808656809837534
+        }
+      ]
+    },
+    {
+      "query": "Consider the Service Agreement between Theravance Biopharma UK Limited and Brett Haumann; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.47,
+        "2": 0.31333333333333335,
+        "4": 0.15666666666666668,
+        "8": 0.07833333333333334,
+        "16": 0.0376,
+        "32": 0.02043478260869565,
+        "64": 0.012702702702702703
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            32015,
+            32250
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            32000,
+            32500
+          ],
+          "score": 5.95600007740373
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            31750,
+            32250
+          ],
+          "score": 5.904161796824253
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            28750,
+            29250
+          ],
+          "score": 3.8428561131016146
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            28500,
+            29000
+          ],
+          "score": 3.679879293071628
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            31250,
+            31750
+          ],
+          "score": 2.7726084589186653
+        }
+      ]
+    },
+    {
+      "query": "Consider the Service Agreement between Theravance Biopharma UK Limited and Brett Haumann; Does this contract provide for joint intellectual property ownership?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 5,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.10066666666666667,
+        "16": 0.052521739130434786,
+        "32": 0.026844444444444445,
+        "64": 0.015894736842105264
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            16945,
+            17247
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            16250,
+            16750
+          ],
+          "score": 11.466877376169885
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            16000,
+            16500
+          ],
+          "score": 11.390547767061612
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            2750,
+            3250
+          ],
+          "score": 6.489382380605667
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            2000,
+            2500
+          ],
+          "score": 6.4319012068975505
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            16500,
+            17000
+          ],
+          "score": 6.375429397537248
+        }
+      ]
+    },
+    {
+      "query": "Consider the Sponsorship Agreement between R. C. Boyd Enterprises, LLC and Cano Petroleum, Inc. for 'Honey Hole'; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.091,
+        "4": 0.22,
+        "8": 0.12,
+        "16": 0.066,
+        "32": 0.03882352941176471,
+        "64": 0.03727971079981925
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.27575757575757576,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.27575757575757576,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            4159,
+            4489
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 8.830483169867488
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            3750,
+            4250
+          ],
+          "score": 8.732486070390715
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            4000,
+            4500
+          ],
+          "score": 8.460217760890115
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 6.117124323973105
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            7250,
+            7750
+          ],
+          "score": 4.734969420672406
+        }
+      ]
+    },
+    {
+      "query": "Consider the Sponsorship Agreement between R. C. Boyd Enterprises, LLC and Cano Petroleum, Inc. for 'Honey Hole'; Is there a minimum commitment required under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 3,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.034666666666666665,
+        "8": 0.04666666666666667,
+        "16": 0.046,
+        "32": 0.027878787878787878,
+        "64": 0.025982828739267962
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.22608695652173913,
+        "8": 0.6086956521739131,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.22608695652173913,
+        "4000": 0.6086956521739131
+      },
+      "gold": [
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            1116,
+            1204
+          ]
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            2160,
+            2302
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            7250,
+            7750
+          ],
+          "score": 4.734969420672406
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            2500,
+            3000
+          ],
+          "score": 4.60854007266788
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            2250,
+            2750
+          ],
+          "score": 4.306082364380593
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            7500,
+            8000
+          ],
+          "score": 4.074570563924584
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            7000,
+            7500
+          ],
+          "score": 3.94831768485864
+        }
+      ]
+    },
+    {
+      "query": "Consider the Sponsorship Agreement between Excite, Inc. and Vitamin Shoppe Industries Inc. for Promotion on WebCrawler Channels; Is there uncapped liability under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.442,
+        "2": 0.2946666666666667,
+        "4": 0.214,
+        "8": 0.107,
+        "16": 0.05582608695652174,
+        "32": 0.03131707317073171,
+        "64": 0.01758904109589041
+      },
+      "recall": {
+        "1": 0.6884735202492211,
+        "2": 0.6884735202492211,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.6884735202492211,
+        "1000": 0.6884735202492211,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            54279,
+            54600
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            54000,
+            54500
+          ],
+          "score": 7.4458160653810115
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            53750,
+            54250
+          ],
+          "score": 6.337843819190239
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            54250,
+            54750
+          ],
+          "score": 6.337843819190239
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            52250,
+            52750
+          ],
+          "score": 4.696121627732172
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            50500,
+            51000
+          ],
+          "score": 4.662665235284709
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Is there a non-compete clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 0.7666666666666667,
+        "8": 0.5148,
+        "16": 0.234,
+        "32": 0.11972093023255814,
+        "64": 0.06435
+      },
+      "recall": {
+        "1": 0.3885003885003885,
+        "2": 0.777000777000777,
+        "4": 0.8935508935508936,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.3885003885003885,
+        "1000": 0.777000777000777,
+        "2000": 0.8935508935508936,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            20426,
+            21063
+          ]
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            21989,
+            22639
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            20500,
+            21000
+          ],
+          "score": 14.039968340677943
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            22000,
+            22500
+          ],
+          "score": 12.23331798345442
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            21750,
+            22250
+          ],
+          "score": 11.818262679861515
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            22250,
+            22750
+          ],
+          "score": 11.015341250906252
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            20750,
+            21250
+          ],
+          "score": 10.948134086395692
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.078,
+        "2": 0.38533333333333336,
+        "4": 0.16514285714285715,
+        "8": 0.08257142857142857,
+        "16": 0.04624,
+        "32": 0.04417391304347826,
+        "64": 0.025721518987341773
+      },
+      "recall": {
+        "1": 0.07677165354330709,
+        "2": 0.5688976377952756,
+        "4": 0.5688976377952756,
+        "8": 0.5688976377952756,
+        "16": 0.5688976377952756,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.07677165354330709,
+        "1000": 0.5688976377952756,
+        "2000": 0.5688976377952756,
+        "4000": 0.5688976377952756
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            36711,
+            37219
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            36250,
+            36750
+          ],
+          "score": 10.549667766330975
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            36500,
+            37000
+          ],
+          "score": 10.164562465532555
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            22000,
+            22500
+          ],
+          "score": 4.318805585035569
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            16750,
+            17250
+          ],
+          "score": 4.283437387989371
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            20500,
+            21000
+          ],
+          "score": 4.2812166910168035
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Does this contract include any revenue or profit-sharing arrangements?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.754,
+        "2": 0.6453333333333333,
+        "4": 0.2765714285714286,
+        "8": 0.16133333333333333,
+        "16": 0.09219047619047618,
+        "32": 0.04721951219512195,
+        "64": 0.021752808988764045
+      },
+      "recall": {
+        "1": 0.7789256198347108,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.7789256198347108,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            11393,
+            11877
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            11500,
+            12000
+          ],
+          "score": 15.792526809722201
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            11250,
+            11750
+          ],
+          "score": 14.604918134599362
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            12750,
+            13250
+          ],
+          "score": 8.975748527717418
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 8.368962025275962
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            11750,
+            12250
+          ],
+          "score": 7.64031989678499
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Are there any services to be provided after the termination of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": 15,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.007304347826086957,
+        "32": 0.0037333333333333333,
+        "64": 0.002048780487804878
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.23333333333333334,
+        "32": 0.23333333333333334,
+        "64": 0.23333333333333334
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            12612,
+            12792
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 8.849247396154531
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 8.811253733184323
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            11500,
+            12000
+          ],
+          "score": 8.220688715966972
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8250,
+            8750
+          ],
+          "score": 8.203483814679496
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            2500,
+            3000
+          ],
+          "score": 7.915800142622544
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Is there uncapped liability under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.738,
+        "2": 0.369,
+        "4": 0.21085714285714285,
+        "8": 0.2029090909090909,
+        "16": 0.1116,
+        "32": 0.053142857142857144,
+        "64": 0.0328235294117647
+      },
+      "recall": {
+        "1": 0.6612903225806451,
+        "2": 0.6612903225806451,
+        "4": 0.6612903225806451,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.6612903225806451,
+        "1000": 0.6612903225806451,
+        "2000": 0.6612903225806451,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32028,
+            32397
+          ]
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32504,
+            32693
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32000,
+            32500
+          ],
+          "score": 4.081160279584784
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            9000,
+            9500
+          ],
+          "score": 3.94831768485864
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32500,
+            33000
+          ],
+          "score": 3.9339724982691253
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Is there a cap on liability under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.736,
+        "2": 0.368,
+        "4": 0.2102857142857143,
+        "8": 0.20254545454545456,
+        "16": 0.1114,
+        "32": 0.053047619047619045,
+        "64": 0.03276470588235294
+      },
+      "recall": {
+        "1": 0.6606822262118492,
+        "2": 0.6606822262118492,
+        "4": 0.6606822262118492,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.6606822262118492,
+        "1000": 0.6606822262118492,
+        "2000": 0.6606822262118492,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32028,
+            32396
+          ]
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32504,
+            32693
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32000,
+            32500
+          ],
+          "score": 4.081160279584784
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            9000,
+            9500
+          ],
+          "score": 3.94831768485864
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            32500,
+            33000
+          ],
+          "score": 3.9339724982691253
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; Is there a covenant not to sue included in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": null,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            13844,
+            13911
+          ]
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            18173,
+            18240
+          ]
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            20121,
+            20393
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 4.880487316642771
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            13000,
+            13500
+          ],
+          "score": 4.229214417253324
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            12750,
+            13250
+          ],
+          "score": 4.015789812346128
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            9000,
+            9500
+          ],
+          "score": 3.94831768485864
+        }
+      ]
+    },
+    {
+      "query": "Consider the Supply Agreement between Florida Chemical Company, LLC and Flotek Chemistry, LLC for Terpene Products; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.112,
+        "2": 0.07466666666666667,
+        "4": 0.037333333333333336,
+        "8": 0.028,
+        "16": 0.016,
+        "32": 0.00908108108108108,
+        "64": 0.005090909090909091
+      },
+      "recall": {
+        "1": 0.6666666666666666,
+        "2": 0.6666666666666666,
+        "4": 0.6666666666666666,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.6666666666666666,
+        "1000": 0.6666666666666666,
+        "2000": 0.6666666666666666,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            16222,
+            16306
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            16250,
+            16750
+          ],
+          "score": 5.0798554020739255
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            16500,
+            17000
+          ],
+          "score": 4.478944664526477
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            6250,
+            6750
+          ],
+          "score": 4.43563975006664
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            6500,
+            7000
+          ],
+          "score": 4.357060383333005
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            12750,
+            13250
+          ],
+          "score": 4.172275987286202
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); Does this contract include an exclusivity agreement?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": null,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            7970,
+            8101
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            16250,
+            16750
+          ],
+          "score": 4.049852011619924
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            16500,
+            17000
+          ],
+          "score": 3.8850842807974932
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            43000,
+            43500
+          ],
+          "score": 3.5548418849253887
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            43250,
+            43750
+          ],
+          "score": 3.5548418849253887
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            21500,
+            22000
+          ],
+          "score": 3.1281628674520574
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); Can this contract be terminated for convenience, and under what conditions?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": 10,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.016153846153846154,
+        "32": 0.00875,
+        "64": 0.00525
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            33227,
+            33332
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            39750,
+            40250
+          ],
+          "score": 8.993142000192352
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            27500,
+            28000
+          ],
+          "score": 5.269908317443253
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            40000,
+            40500
+          ],
+          "score": 5.147128287850281
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            3250,
+            3750
+          ],
+          "score": 5.0815220187880765
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            38500,
+            39000
+          ],
+          "score": 4.042451755133959
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); What happens in the event of a change of control of one of the parties in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.54,
+        "2": 0.428,
+        "4": 0.39666666666666667,
+        "8": 0.18307692307692308,
+        "16": 0.09916666666666667,
+        "32": 0.04958333333333333,
+        "64": 0.028
+      },
+      "recall": {
+        "1": 0.453781512605042,
+        "2": 0.719327731092437,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.453781512605042,
+        "1000": 0.719327731092437,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            33342,
+            33500
+          ]
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            47980,
+            48417
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            47750,
+            48250
+          ],
+          "score": 9.676058218851434
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            33250,
+            33750
+          ],
+          "score": 9.593576390552728
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            33000,
+            33500
+          ],
+          "score": 9.026580574215016
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            48000,
+            48500
+          ],
+          "score": 7.46711447264234
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            8500,
+            9000
+          ],
+          "score": 7.23024009752529
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 3,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.18266666666666667,
+        "8": 0.09963636363636363,
+        "16": 0.04765217391304348,
+        "32": 0.028102564102564103,
+        "64": 0.01543661971830986
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            38299,
+            38573
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            20000,
+            20500
+          ],
+          "score": 4.558970971243085
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            19750,
+            20250
+          ],
+          "score": 4.357060383333005
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            38250,
+            38750
+          ],
+          "score": 4.283437387989371
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            19500,
+            20000
+          ],
+          "score": 4.2812166910168035
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            19250,
+            19750
+          ],
+          "score": 4.244276464128779
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing and Transportation Services Agreement between Purolator Courier Ltd. and Parcelway Courier Systems Canada Ltd. (Dynamex Inc.); What are the insurance requirements under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.982,
+        "2": 0.635,
+        "4": 0.5613333333333334,
+        "8": 0.5661818181818182,
+        "16": 0.4831111111111111,
+        "32": 0.20704761904761904,
+        "64": 0.11594666666666667
+      },
+      "recall": {
+        "1": 0.22585096596136153,
+        "2": 0.2920883164673413,
+        "4": 0.3873045078196872,
+        "8": 0.7161913523459061,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.22585096596136153,
+        "1000": 0.2920883164673413,
+        "2000": 0.3873045078196872,
+        "4000": 0.7161913523459061
+      },
+      "gold": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            19106,
+            20201
+          ]
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            20210,
+            20643
+          ]
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            20883,
+            21314
+          ]
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            21856,
+            22071
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            20000,
+            20500
+          ],
+          "score": 8.826903311040294
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            21500,
+            22000
+          ],
+          "score": 8.776042950291723
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            21250,
+            21750
+          ],
+          "score": 8.670930619824736
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            20250,
+            20750
+          ],
+          "score": 8.570236650621387
+        },
+        {
+          "file_path": "cuad/DYNAMEXINC_06_06_1996-EX-10.4-TRANSPORTATION SERVICES AGREEMENT.txt",
+          "span": [
+            21750,
+            22250
+          ],
+          "score": 8.227899338907859
+        }
+      ]
+    },
+    {
+      "query": "Consider the Co-Branding Agreement between PC Quote, Inc. and A.B. Watley, Inc. for Market Data Software; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.26,
+        "2": 0.13,
+        "4": 0.08666666666666667,
+        "8": 0.043333333333333335,
+        "16": 0.026,
+        "32": 0.014857142857142857,
+        "64": 0.008
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14780,
+            14910
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14500,
+            15000
+          ],
+          "score": 4.104284154946938
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            12500,
+            13000
+          ],
+          "score": 2.9892974507307115
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            12250,
+            12750
+          ],
+          "score": 2.9635044731648974
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14750,
+            15250
+          ],
+          "score": 2.9381527942649326
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14250,
+            14750
+          ],
+          "score": 2.913231184655926
+        }
+      ]
+    },
+    {
+      "query": "Consider the Promotion Agreement between Depomed, Inc. and King Pharmaceuticals, Inc. for Glumetza; Is there a non-compete clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": null,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            28888,
+            29204
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            145000,
+            145500
+          ],
+          "score": 7.845628128938144
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            145250,
+            145750
+          ],
+          "score": 7.711395265856986
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            161000,
+            161500
+          ],
+          "score": 6.059093970924534
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            160750,
+            161250
+          ],
+          "score": 6.022004770488263
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            65250,
+            65750
+          ],
+          "score": 5.476650731003856
+        }
+      ]
+    },
+    {
+      "query": "Consider the Promotion Agreement between Depomed, Inc. and King Pharmaceuticals, Inc. for Glumetza; Does this contract include any right of first refusal, right of first offer, or right of first negotiation?",
+      "answerable": true,
+      "abstain": false,
+      "label": "partial_span",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.74,
+        "2": 0.49333333333333335,
+        "4": 0.462,
+        "8": 0.481,
+        "16": 0.27712,
+        "32": 0.17856,
+        "64": 0.1144421052631579
+      },
+      "recall": {
+        "1": 0.10879153190238165,
+        "2": 0.10879153190238165,
+        "4": 0.2037635989414878,
+        "8": 0.4242869744192884,
+        "16": 0.5092619817700677,
+        "32": 0.6562775654219347,
+        "64": 0.7991767127315496
+      },
+      "budget_recall": {
+        "500": 0.10879153190238165,
+        "1000": 0.10879153190238165,
+        "2000": 0.2037635989414878,
+        "4000": 0.4242869744192884
+      },
+      "gold": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            144427,
+            146183
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            147380,
+            147892
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            148461,
+            149594
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            147250,
+            147750
+          ],
+          "score": 20.030052635331238
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            147000,
+            147500
+          ],
+          "score": 18.898076201420256
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            144000,
+            144500
+          ],
+          "score": 17.184987367067272
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            144250,
+            144750
+          ],
+          "score": 16.765485909054554
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113750,
+            114250
+          ],
+          "score": 15.482892537649999
+        }
+      ]
+    },
+    {
+      "query": "Consider the Promotion Agreement between Depomed, Inc. and King Pharmaceuticals, Inc. for Glumetza; Is there a minimum commitment required under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.493,
+        "4": 0.34933333333333333,
+        "8": 0.42966666666666664,
+        "16": 0.1983076923076923,
+        "32": 0.13046808510638297,
+        "64": 0.06738461538461539
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.21670329670329672,
+        "4": 0.23032967032967033,
+        "8": 0.5665934065934066,
+        "16": 0.5665934065934066,
+        "32": 0.6738461538461539,
+        "64": 0.6738461538461539
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.21670329670329672,
+        "2000": 0.23032967032967033,
+        "4000": 0.5665934065934066
+      },
+      "gold": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            42251,
+            42711
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            45281,
+            45804
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            112969,
+            113347
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113354,
+            113644
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113652,
+            113911
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113917,
+            114282
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            151500,
+            152000
+          ],
+          "score": 7.687548609110388
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113000,
+            113500
+          ],
+          "score": 7.43351688150778
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            112750,
+            113250
+          ],
+          "score": 7.398590704608295
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            151250,
+            151750
+          ],
+          "score": 6.546214249136539
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            113250,
+            113750
+          ],
+          "score": 6.310123851960227
+        }
+      ]
+    },
+    {
+      "query": "Consider the Promotion Agreement between Depomed, Inc. and King Pharmaceuticals, Inc. for Glumetza; Are there any services to be provided after the termination of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": 18,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.044851063829787235,
+        "64": 0.022425531914893618
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.43020408163265306,
+        "64": 0.43020408163265306
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            103074,
+            103212
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            105475,
+            105918
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            151361,
+            152005
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            118500,
+            119000
+          ],
+          "score": 8.292845294038033
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            90750,
+            91250
+          ],
+          "score": 8.1313832797021
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            90500,
+            91000
+          ],
+          "score": 8.108496473763381
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            118750,
+            119250
+          ],
+          "score": 7.631048601445556
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            114750,
+            115250
+          ],
+          "score": 6.506369494822431
+        }
+      ]
+    },
+    {
+      "query": "Consider the Promotion Agreement between Depomed, Inc. and King Pharmaceuticals, Inc. for Glumetza; Is there a covenant not to sue included in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": 45,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.009978947368421053
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.18486739469578783
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            64934,
+            65583
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            66237,
+            66474
+          ]
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            66571,
+            66967
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            133000,
+            133500
+          ],
+          "score": 15.260729485253625
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            132750,
+            133250
+          ],
+          "score": 12.205690304480145
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            133250,
+            133750
+          ],
+          "score": 10.533119077673426
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            89500,
+            90000
+          ],
+          "score": 5.443179247000899
+        },
+        {
+          "file_path": "cuad/KINGPHARMACEUTICALSINC_08_09_2006-EX-10.1-PROMOTION AGREEMENT.txt",
+          "span": [
+            34000,
+            34500
+          ],
+          "score": 5.09963098270747
+        }
+      ]
+    },
+    {
+      "query": "Consider the Gas Transportation Agreement between PennTex North Louisiana Operating, LLC and MRD Operating LLC; What is the renewal term for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.886,
+        "2": 0.443,
+        "4": 0.29533333333333334,
+        "8": 0.14766666666666667,
+        "16": 0.07383333333333333,
+        "32": 0.03616326530612245,
+        "64": 0.021095238095238094
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            49279,
+            49722
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            49250,
+            49750
+          ],
+          "score": 5.874920113680587
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            1500,
+            2000
+          ],
+          "score": 4.808155014741246
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            49500,
+            50000
+          ],
+          "score": 4.73646630583884
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            1250,
+            1750
+          ],
+          "score": 4.420136737179371
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            49000,
+            49500
+          ],
+          "score": 4.302679651419053
+        }
+      ]
+    },
+    {
+      "query": "Consider the Gas Transportation Agreement between PennTex North Louisiana Operating, LLC and MRD Operating LLC; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.275,
+        "4": 0.18333333333333332,
+        "8": 0.11,
+        "16": 0.05,
+        "32": 0.0275,
+        "64": 0.015714285714285715
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            45699,
+            45974
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            46000,
+            46500
+          ],
+          "score": 5.360144849721486
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            45500,
+            46000
+          ],
+          "score": 5.03025594351614
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            46250,
+            46750
+          ],
+          "score": 4.910393833202481
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            45250,
+            45750
+          ],
+          "score": 4.365096431003913
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            46500,
+            47000
+          ],
+          "score": 4.357060383333005
+        }
+      ]
+    },
+    {
+      "query": "Consider the Gas Transportation Agreement between PennTex North Louisiana Operating, LLC and MRD Operating LLC; Is there a covenant not to sue included in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.918,
+        "2": 0.459,
+        "4": 0.2622857142857143,
+        "8": 0.153,
+        "16": 0.0765,
+        "32": 0.03906382978723404,
+        "64": 0.03247058823529412
+      },
+      "recall": {
+        "1": 0.6652173913043479,
+        "2": 0.6652173913043479,
+        "4": 0.6652173913043479,
+        "8": 0.6652173913043479,
+        "16": 0.6652173913043479,
+        "32": 0.6652173913043479,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.6652173913043479,
+        "1000": 0.6652173913043479,
+        "2000": 0.6652173913043479,
+        "4000": 0.6652173913043479
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            38269,
+            38959
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            38500,
+            39000
+          ],
+          "score": 5.844358262977619
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            500,
+            1000
+          ],
+          "score": 5.192690257504724
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 5.192690257504724
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            39250,
+            39750
+          ],
+          "score": 4.5695904088497254
+        },
+        {
+          "file_path": "cuad/PenntexMidstreamPartnersLp_20150416_S-1A_EX-10.4_9042833_EX-10.4_Transportation Agreement.txt",
+          "span": [
+            39000,
+            39500
+          ],
+          "score": 4.298273396591914
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; What is the expiration date of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": 61,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0020975109536683135
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.28662420382165604
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            3388,
+            3545
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            24750,
+            25250
+          ],
+          "score": 8.025715059066526
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            47750,
+            48250
+          ],
+          "score": 8.006247387511706
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            48750,
+            49250
+          ],
+          "score": 7.978167918911518
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            25000,
+            25500
+          ],
+          "score": 7.7349492726047995
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            51000,
+            51500
+          ],
+          "score": 6.628960934776607
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; Is there a non-disparagement clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "partial_span",
+      "first_hit_rank": 6,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.05046153846153846,
+        "16": 0.08539130434782609,
+        "32": 0.043644444444444444,
+        "64": 0.02338095238095238
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.3340122199592668,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.3340122199592668
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            13350,
+            13670
+          ]
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            61086,
+            61257
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            60000,
+            60500
+          ],
+          "score": 9.180413841439396
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            60250,
+            60750
+          ],
+          "score": 8.717130119289823
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            44750,
+            45250
+          ],
+          "score": 7.950156197277201
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            46750,
+            47250
+          ],
+          "score": 5.787332898871169
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            45000,
+            45500
+          ],
+          "score": 5.6865923405368255
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; Does this contract include any volume restrictions?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": null,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            17729,
+            17939
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            50750,
+            51250
+          ],
+          "score": 7.39310704613941
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            36250,
+            36750
+          ],
+          "score": 6.046772126240999
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            30250,
+            30750
+          ],
+          "score": 6.009421971081203
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            36500,
+            37000
+          ],
+          "score": 5.184922212437191
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            30000,
+            30500
+          ],
+          "score": 5.076274378261868
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; What licenses are granted under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.278,
+        "2": 0.538,
+        "4": 0.468,
+        "8": 0.288,
+        "16": 0.144,
+        "32": 0.0795,
+        "64": 0.05945679012345679
+      },
+      "recall": {
+        "1": 0.11544850498338871,
+        "2": 0.446843853820598,
+        "4": 0.7774086378737541,
+        "8": 0.7774086378737541,
+        "16": 0.7774086378737541,
+        "32": 0.792358803986711,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.11544850498338871,
+        "1000": 0.446843853820598,
+        "2000": 0.7774086378737541,
+        "4000": 0.7774086378737541
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            3851,
+            4268
+          ]
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            28102,
+            28889
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            28750,
+            29250
+          ],
+          "score": 8.425997758487586
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            3750,
+            4250
+          ],
+          "score": 7.605239166392483
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            28000,
+            28500
+          ],
+          "score": 7.206998039818622
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            37750,
+            38250
+          ],
+          "score": 6.465156285285099
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            26250,
+            26750
+          ],
+          "score": 6.350623114117614
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; Are there any services to be provided after the termination of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "partial_span",
+      "first_hit_rank": 3,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.132,
+        "8": 0.07107692307692308,
+        "16": 0.04017391304347826,
+        "32": 0.06961904761904762,
+        "64": 0.07209302325581396
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.14903225806451612,
+        "8": 0.14903225806451612,
+        "16": 0.14903225806451612,
+        "32": 0.47161290322580646,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.14903225806451612,
+        "4000": 0.14903225806451612
+      },
+      "gold": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            47413,
+            48223
+          ]
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            51519,
+            52259
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            49250,
+            49750
+          ],
+          "score": 9.61956893169484
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            24750,
+            25250
+          ],
+          "score": 9.360627477986718
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            51250,
+            51750
+          ],
+          "score": 8.918355099443039
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            25000,
+            25500
+          ],
+          "score": 8.195295570545515
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            48750,
+            49250
+          ],
+          "score": 7.781366421677842
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between Holiday RV Superstores, Inc. and Affinity Group, Inc. for Good Sam Branding; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.362,
+        "2": 0.24133333333333334,
+        "4": 0.1448,
+        "8": 0.0724,
+        "16": 0.04022222222222222,
+        "32": 0.021294117647058824,
+        "64": 0.012785194603376421
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            10347,
+            10528
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            10250,
+            10750
+          ],
+          "score": 8.957278392160294
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            10000,
+            10500
+          ],
+          "score": 8.567061996001913
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            10500,
+            11000
+          ],
+          "score": 3.0119837717377282
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            10750,
+            11250
+          ],
+          "score": 2.225026614526111
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            0,
+            500
+          ],
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between Holiday RV Superstores, Inc. and Affinity Group, Inc. for Good Sam Branding; Can this contract be terminated for convenience, and under what conditions?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.748,
+        "2": 0.49866666666666665,
+        "4": 0.24933333333333332,
+        "8": 0.136,
+        "16": 0.0748,
+        "32": 0.042742857142857145,
+        "64": 0.02641802641802642
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            5116,
+            5490
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            5000,
+            5500
+          ],
+          "score": 4.308520595811043
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            4750,
+            5250
+          ],
+          "score": 4.18407606996978
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            6250,
+            6750
+          ],
+          "score": 3.8910200084591486
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            5250,
+            5750
+          ],
+          "score": 3.739791390116867
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            5500,
+            6000
+          ],
+          "score": 3.281971324293411
+        }
+      ]
+    },
+    {
+      "query": "Consider the Business Affiliate Agreement between Dr. George D. Green and UNION DENTAL CORP.; What are the audit rights under this contract?",
+      "answerable": true,
+      "abstain": true,
+      "label": "false_abstain",
+      "first_hit_rank": 20,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.04888888888888889,
+        "64": 0.031243343037705033
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            3636,
+            4076
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            8250,
+            8750
+          ],
+          "score": 1.7758094300936347
+        },
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 1.692746782388041
+        },
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            12250,
+            12750
+          ],
+          "score": 1.692746782388041
+        },
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            12000,
+            12500
+          ],
+          "score": 1.6316895747765645
+        },
+        {
+          "file_path": "cuad/UnionDentalHoldingsInc_20050204_8-KA_EX-10_3345577_EX-10_Affiliate Agreement.txt",
+          "span": [
+            8750,
+            9250
+          ],
+          "score": 1.6171073495730948
+        }
+      ]
+    },
+    {
+      "query": "Consider the Support and Maintenance Agreement between On2 Technologies, Inc. and Wildform, Inc.; How is intellectual property ownership assigned in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 5,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.08666666666666667,
+        "16": 0.08109090909090909,
+        "32": 0.043512195121951217,
+        "64": 0.02512676056338028
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.5829596412556054,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.5829596412556054
+      },
+      "gold": [
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            22240,
+            22686
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            4500,
+            5000
+          ],
+          "score": 11.852949206684874
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            23000,
+            23500
+          ],
+          "score": 10.235170343479153
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            4750,
+            5250
+          ],
+          "score": 9.420516393915692
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            23250,
+            23750
+          ],
+          "score": 8.88969542387128
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            22000,
+            22500
+          ],
+          "score": 7.601880824680885
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; What is the notice period required to terminate the renewal?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.288,
+        "2": 0.192,
+        "4": 0.096,
+        "8": 0.044307692307692305,
+        "16": 0.02723146747352496,
+        "32": 0.01434548714883443,
+        "64": 0.008451696208475173
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13593,
+            13737
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13250,
+            13750
+          ],
+          "score": 13.812228494127822
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13500,
+            14000
+          ],
+          "score": 9.94393334053841
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13000,
+            13500
+          ],
+          "score": 9.341642473494804
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            17750,
+            18250
+          ],
+          "score": 6.493449233140673
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            17500,
+            18000
+          ],
+          "score": 6.332315846455346
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.106,
+        "4": 0.23733333333333334,
+        "8": 0.11866666666666667,
+        "16": 0.05696,
+        "32": 0.0339047619047619,
+        "64": 0.020941176470588234
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.23093681917211328,
+        "4": 0.775599128540305,
+        "8": 0.775599128540305,
+        "16": 0.775599128540305,
+        "32": 0.775599128540305,
+        "64": 0.775599128540305
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.23093681917211328,
+        "2000": 0.775599128540305,
+        "4000": 0.775599128540305
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            19144,
+            19603
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            21000,
+            21500
+          ],
+          "score": 6.117124323973105
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            18750,
+            19250
+          ],
+          "score": 5.8532180833663645
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            19000,
+            19500
+          ],
+          "score": 5.803145978962723
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            20750,
+            21250
+          ],
+          "score": 3.984013312885577
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 3.1691425657366707
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; Can this contract be terminated for convenience, and under what conditions?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 8,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.048,
+        "16": 0.024,
+        "32": 0.015567567567567567,
+        "64": 0.008470588235294117
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13593,
+            13737
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            17500,
+            18000
+          ],
+          "score": 4.703231765177817
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14250,
+            14750
+          ],
+          "score": 3.7217103626871784
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            15500,
+            16000
+          ],
+          "score": 3.651101434750966
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14500,
+            15000
+          ],
+          "score": 3.5831218322075955
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14750,
+            15250
+          ],
+          "score": 3.5831218322075955
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; What licenses are granted under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.352,
+        "2": 0.4226666666666667,
+        "4": 0.21133333333333335,
+        "8": 0.10566666666666667,
+        "16": 0.05763636363636364,
+        "32": 0.035222222222222224,
+        "64": 0.01950769230769231
+      },
+      "recall": {
+        "1": 0.555205047318612,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.555205047318612,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            2109,
+            2426
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            2250,
+            2750
+          ],
+          "score": 3.3967672250551026
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            2000,
+            2500
+          ],
+          "score": 3.3355066975426935
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            2500,
+            3000
+          ],
+          "score": 3.3355066975426935
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            4250,
+            4750
+          ],
+          "score": 3.3086643789730146
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14250,
+            14750
+          ],
+          "score": 3.247649891778183
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; Are there any services to be provided after the termination of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "partial_span",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.412,
+        "2": 0.608,
+        "4": 0.304,
+        "8": 0.152,
+        "16": 0.17447619047619048,
+        "32": 0.0916,
+        "64": 0.05310144927536232
+      },
+      "recall": {
+        "1": 0.22489082969432314,
+        "2": 0.4978165938864629,
+        "4": 0.4978165938864629,
+        "8": 0.4978165938864629,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.22489082969432314,
+        "1000": 0.4978165938864629,
+        "2000": 0.4978165938864629,
+        "4000": 0.4978165938864629
+      },
+      "gold": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            15044,
+            15960
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14750,
+            15250
+          ],
+          "score": 5.847918486446634
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            15000,
+            15500
+          ],
+          "score": 5.665534535517811
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            13750,
+            14250
+          ],
+          "score": 4.636050169667211
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            14000,
+            14500
+          ],
+          "score": 4.518080301644957
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            18750,
+            19250
+          ],
+          "score": 4.500422007422291
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between MJ Syndicated, Inc. and Simply Herbals for Manufacturing and Selling Health-Related Products; What is the expiration date of this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.2,
+        "4": 0.1,
+        "8": 0.046153846153846156,
+        "16": 0.03,
+        "32": 0.016666666666666666,
+        "64": 0.009230769230769232
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            1341,
+            1491
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            1500,
+            2000
+          ],
+          "score": 5.5908763150350635
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            1250,
+            1750
+          ],
+          "score": 5.5562290205434985
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            7000,
+            7500
+          ],
+          "score": 3.8762529476861616
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            7250,
+            7750
+          ],
+          "score": 3.806771709195442
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            9500,
+            10000
+          ],
+          "score": 1.766591611772454
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between MJ Syndicated, Inc. and Simply Herbals for Manufacturing and Selling Health-Related Products; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "wrong_section",
+      "first_hit_rank": null,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "64": 0.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            14636,
+            14717
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            15750,
+            16250
+          ],
+          "score": 4.517105522911371
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            7000,
+            7500
+          ],
+          "score": 3.8762529476861616
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            7250,
+            7750
+          ],
+          "score": 3.806771709195442
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            21000,
+            21500
+          ],
+          "score": 3.2130142138738664
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            20750,
+            21250
+          ],
+          "score": 3.183235347766418
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between MJ Syndicated, Inc. and Simply Herbals for Manufacturing and Selling Health-Related Products; Is there a cap on liability under this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 6,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.08492307692307692,
+        "16": 0.05018181818181818,
+        "32": 0.0276,
+        "64": 0.01577142857142857
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            18787,
+            19063
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            3750,
+            4250
+          ],
+          "score": 8.11328626167611
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            13000,
+            13500
+          ],
+          "score": 4.7463684539953706
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            18250,
+            18750
+          ],
+          "score": 4.158963131041027
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            12750,
+            13250
+          ],
+          "score": 4.1327013227074145
+        },
+        {
+          "file_path": "cuad/MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            3500,
+            4000
+          ],
+          "score": 4.1067690940675785
+        }
+      ]
+    },
+    {
+      "query": "Consider the Non-Competition Agreement and Right of First Offer between Glamis Gold Ltd. and Western Copper Corporation; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.364,
+        "2": 0.292,
+        "4": 0.12514285714285714,
+        "8": 0.073,
+        "16": 0.04610526315789474,
+        "32": 0.025028571428571428,
+        "64": 0.013476923076923077
+      },
+      "recall": {
+        "1": 0.8310502283105022,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.8310502283105022,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            15318,
+            15537
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            15000,
+            15500
+          ],
+          "score": 8.621502547726513
+        },
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            15250,
+            15750
+          ],
+          "score": 8.567061996001913
+        },
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            0,
+            500
+          ],
+          "score": 2.922001527889232
+        },
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            9500,
+            10000
+          ],
+          "score": 2.204962492508917
+        },
+        {
+          "file_path": "cuad/WESTERN COPPER - NON-COMPETITION AGREEMENT.txt",
+          "span": [
+            8500,
+            9000
+          ],
+          "score": 2.185256992070592
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between Tate & Lyle Fermentation Products Ltd. and Igene Biotechnology, Inc. for Astaxanthin Production; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.332,
+        "2": 0.22133333333333333,
+        "4": 0.09485714285714286,
+        "8": 0.05533333333333333,
+        "16": 0.02656,
+        "32": 0.014755555555555555,
+        "64": 0.00840506329113924
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            57535,
+            57701
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            57250,
+            57750
+          ],
+          "score": 7.2560253066447995
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            57500,
+            58000
+          ],
+          "score": 7.2560253066447995
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            17000,
+            17500
+          ],
+          "score": 3.59880659687993
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            39500,
+            40000
+          ],
+          "score": 3.559124364156366
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            17250,
+            17750
+          ],
+          "score": 3.5126427686699944
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between Tate & Lyle Fermentation Products Ltd. and Igene Biotechnology, Inc. for Astaxanthin Production; Does this contract include any right of first refusal, right of first offer, or right of first negotiation?",
+      "answerable": true,
+      "abstain": false,
+      "label": "partial_span",
+      "first_hit_rank": 2,
+      "precision": {
+        "1": 0.0,
+        "2": 0.006666666666666667,
+        "4": 0.0033333333333333335,
+        "8": 0.0016666666666666668,
+        "16": 0.0008888888888888889,
+        "32": 0.1490989010989011,
+        "64": 0.10279329608938548
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.002109704641350211,
+        "4": 0.002109704641350211,
+        "8": 0.002109704641350211,
+        "16": 0.002109704641350211,
+        "32": 0.7156118143459915,
+        "64": 0.9704641350210971
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.002109704641350211,
+        "2000": 0.002109704641350211,
+        "4000": 0.002109704641350211
+      },
+      "gold": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            25059,
+            25887
+          ]
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            27242,
+            28070
+          ]
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            40245,
+            40959
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            39500,
+            40000
+          ],
+          "score": 28.266523026506277
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            39750,
+            40250
+          ],
+          "score": 24.575748951103563
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            41500,
+            42000
+          ],
+          "score": 22.933921683091405
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            41750,
+            42250
+          ],
+          "score": 22.624426974529975
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            250,
+            750
+          ],
+          "score": 18.739450613975364
+        }
+      ]
+    },
+    {
+      "query": "Consider the Joint Venture Agreement between Tate & Lyle Fermentation Products Ltd. and Igene Biotechnology, Inc. for Astaxanthin Production; What are the audit rights under this contract?",
+      "answerable": true,
+      "abstain": true,
+      "label": "false_abstain",
+      "first_hit_rank": 22,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 0.012,
+        "64": 0.0071707317073170735
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.0,
+        "8": 0.0,
+        "16": 0.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.0,
+        "4000": 0.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            62830,
+            62977
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            33250,
+            33750
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            33500,
+            34000
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            33750,
+            34250
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            37000,
+            37500
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/IGENEBIOTECHNOLOGYINC_05_13_2003-EX-1-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            37250,
+            37750
+          ],
+          "score": 2.821726473270231
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Sucampo Pharmaceuticals, Inc., Sucampo Pharma, LLC, and R-Tech Ueno, Ltd.; What is the governing law for this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.212,
+        "2": 0.15466666666666667,
+        "4": 0.07733333333333334,
+        "8": 0.03569230769230769,
+        "16": 0.017185185185185185,
+        "32": 0.00928,
+        "64": 0.005213483146067416
+      },
+      "recall": {
+        "1": 0.9137931034482759,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.9137931034482759,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            52644,
+            52760
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            52250,
+            52750
+          ],
+          "score": 8.460217760890115
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            52500,
+            53000
+          ],
+          "score": 8.460217760890115
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            54500,
+            55000
+          ],
+          "score": 7.574427979666634
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            54250,
+            54750
+          ],
+          "score": 7.305507086964127
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            6000,
+            6500
+          ],
+          "score": 6.784778000964769
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Sucampo Pharmaceuticals, Inc., Sucampo Pharma, LLC, and R-Tech Ueno, Ltd.; Is there an anti-assignment clause in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 4,
+      "precision": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.18914285714285714,
+        "8": 0.10184615384615385,
+        "16": 0.068,
+        "32": 0.034,
+        "64": 0.020311688311688312
+      },
+      "recall": {
+        "1": 0.0,
+        "2": 0.0,
+        "4": 0.8465473145780051,
+        "8": 0.8465473145780051,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.0,
+        "1000": 0.0,
+        "2000": 0.8465473145780051,
+        "4000": 0.8465473145780051
+      },
+      "gold": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            55169,
+            55560
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            35000,
+            35500
+          ],
+          "score": 8.10794869984142
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            38000,
+            38500
+          ],
+          "score": 6.9316209766698105
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            38250,
+            38750
+          ],
+          "score": 6.9316209766698105
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            55000,
+            55500
+          ],
+          "score": 5.381139932043705
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            12250,
+            12750
+          ],
+          "score": 5.1317744936883285
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Sucampo Pharmaceuticals, Inc., Sucampo Pharma, LLC, and R-Tech Ueno, Ltd.; Are there any third-party beneficiaries designated in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 0.372,
+        "2": 0.248,
+        "4": 0.1488,
+        "8": 0.06763636363636363,
+        "16": 0.03234782608695652,
+        "32": 0.015829787234042554,
+        "64": 0.008175824175824176
+      },
+      "recall": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 1.0,
+        "1000": 1.0,
+        "2000": 1.0,
+        "4000": 1.0
+      },
+      "gold": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            61284,
+            61470
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            61250,
+            61750
+          ],
+          "score": 11.889166250620452
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            61000,
+            61500
+          ],
+          "score": 11.615525681501921
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            61500,
+            62000
+          ],
+          "score": 9.17019810199572
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            61750,
+            62250
+          ],
+          "score": 8.286720155414837
+        },
+        {
+          "file_path": "cuad/SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            1750,
+            2250
+          ],
+          "score": 7.826024338635932
+        }
+      ]
+    },
+    {
+      "query": "Consider the Marketing Agreement between Loop Industries, Inc. and Indorama Loop Technologies, LLC for Product Supply and Development; Is there a clause preventing the solicitation of customers in this contract?",
+      "answerable": true,
+      "abstain": false,
+      "label": "hit",
+      "first_hit_rank": 1,
+      "precision": {
+        "1": 1.0,
+        "2": 1.0,
+        "4": 0.42857142857142855,
+        "8": 0.21428571428571427,
+        "16": 0.17583333333333334,
+        "32": 0.10963636363636364,
+        "64": 0.06435432230522946
+      },
+      "recall": {
+        "1": 0.41459369817578773,
+        "2": 0.6218905472636815,
+        "4": 0.6218905472636815,
+        "8": 0.6218905472636815,
+        "16": 0.8747927031509121,
+        "32": 1.0,
+        "64": 1.0
+      },
+      "budget_recall": {
+        "500": 0.41459369817578773,
+        "1000": 0.6218905472636815,
+        "2000": 0.6218905472636815,
+        "4000": 0.6218905472636815
+      },
+      "gold": [
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            11849,
+            13055
+          ]
+        }
+      ],
+      "top_passages": [
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            12500,
+            13000
+          ],
+          "score": 12.727622547532706
+        },
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            12250,
+            12750
+          ],
+          "score": 11.775400550854215
+        },
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            4000,
+            4500
+          ],
+          "score": 8.499647126407297
+        },
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            27750,
+            28250
+          ],
+          "score": 8.168582410422614
+        },
+        {
+          "file_path": "cuad/Loop Industries, Inc. - Marketing Agreement.txt",
+          "span": [
+            5500,
+            6000
+          ],
+          "score": 8.038488791232446
+        }
+      ]
+    },
+    {
+      "query": "Consider the Agency Agreement between General Electric Capital Corporation and Duckwall-Alco Stores, Inc. for Equipment Leasing; Is there a cap on liability under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
+          "span": [
+            11250,
+            11355
+          ],
+          "score": 4.310949823651554
+        },
+        {
+          "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
+          "span": [
+            11000,
+            11355
+          ],
+          "score": 3.12634153070269
+        },
+        {
+          "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
+          "span": [
+            0,
+            500
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
+          "span": [
+            250,
+            750
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.txt",
+          "span": [
+            500,
+            1000
+          ],
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between Holiday RV Superstores, Inc. and Affinity Group, Inc. for Good Sam Branding; Is there a cap on liability under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            0,
+            500
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            250,
+            750
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            500,
+            1000
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 0.0
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            1000,
+            1500
+          ],
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between ABG-Shaq, LLC and Papa John's International, Inc.; What are the audit rights under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            24750,
+            25250
+          ],
+          "score": 5.867899959375469
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            29250,
+            29750
+          ],
+          "score": 5.855644483732411
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            29500,
+            30000
+          ],
+          "score": 5.804417799929046
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            30000,
+            30500
+          ],
+          "score": 5.076274378261868
+        },
+        {
+          "file_path": "cuad/PapaJohnsInternationalInc_20190617_8-K_EX-10.1_11707365_EX-10.1_Endorsement Agreement.txt",
+          "span": [
+            51000,
+            51500
+          ],
+          "score": 4.952275416192517
+        }
+      ]
+    },
+    {
+      "query": "Consider the Co-Branding Agreement between PC Quote, Inc. and A.B. Watley, Inc. for Market Data Software; What are the insurance requirements under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            3500,
+            4000
+          ],
+          "score": 2.872616169500581
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            3750,
+            4250
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            9000,
+            9500
+          ],
+          "score": 2.0933693970557323
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            8750,
+            9250
+          ],
+          "score": 2.0556155843728843
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            13000,
+            13500
+          ],
+          "score": 2.0556155843728843
+        }
+      ]
+    },
+    {
+      "query": "Consider the Walabot HOME Reseller Agreement between Vayyar Imaging Ltd. and Inde Living Holdings, Inc.; What are the insurance requirements under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            12750,
+            13250
+          ],
+          "score": 2.821726473270231
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            12500,
+            13000
+          ],
+          "score": 2.748685169597894
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            4250,
+            4750
+          ],
+          "score": 2.1731960304803817
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 2.0743207197415927
+        },
+        {
+          "file_path": "cuad/HealthcareIntegratedTechnologiesInc_20190812_8-K_EX-10.1_11776966_EX-10.1_Reseller Agreement.txt",
+          "span": [
+            7500,
+            8000
+          ],
+          "score": 2.0556155843728843
+        }
+      ]
+    },
+    {
+      "query": "Consider the Sponsorship Agreement between Excite, Inc. and Vitamin Shoppe Industries Inc. for Promotion on WebCrawler Channels; What are the insurance requirements under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            54000,
+            54500
+          ],
+          "score": 4.265524989343967
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            78500,
+            79000
+          ],
+          "score": 4.037744501018639
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            78750,
+            79250
+          ],
+          "score": 3.937918672789414
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            47250,
+            47750
+          ],
+          "score": 3.2251035466894784
+        },
+        {
+          "file_path": "cuad/VITAMINSHOPPECOMINC_09_13_1999-EX-10.26-SPONSORSHIP AGREEMENT.txt",
+          "span": [
+            47500,
+            48000
+          ],
+          "score": 3.1801121834922026
+        }
+      ]
+    },
+    {
+      "query": "Consider the Strategic Alliance Agreement between Information System Associates, Inc. and Rubicon Software Group plc; What are the insurance requirements under this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            7750,
+            8250
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8000,
+            8500
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            9000,
+            9500
+          ],
+          "score": 3.94831768485864
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8250,
+            8750
+          ],
+          "score": 3.9240002105986638
+        },
+        {
+          "file_path": "cuad/DUOSTECHNOLOGIESGROUP,INC_04_21_2009-EX-10.1-STRATEGIC ALLIANCE AGREEMENT.txt",
+          "span": [
+            8750,
+            9250
+          ],
+          "score": 3.9240002105986638
+        }
+      ]
+    },
+    {
+      "query": "Consider the Supply Agreement between Florida Chemical Company, LLC and Flotek Chemistry, LLC for Terpene Products; Does this contract include an exclusivity agreement?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            17250,
+            17750
+          ],
+          "score": 2.2984651938299887
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            17000,
+            17500
+          ],
+          "score": 2.2043631056716366
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            10000,
+            10500
+          ],
+          "score": 2.1208546354547497
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            9750,
+            10250
+          ],
+          "score": 2.0942636622689816
+        },
+        {
+          "file_path": "cuad/FLOTEKINDUSTRIESINCCN_05_09_2019-EX-10.1-SUPPLY AGREEMENT.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 1.9573062948953706
+        }
+      ]
+    },
+    {
+      "query": "Consider the Service Agreement between Theravance Biopharma UK Limited and Brett Haumann; What happens in the event of a change of control of one of the parties in this contract?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            31250,
+            31750
+          ],
+          "score": 6.620003520055655
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            31500,
+            32000
+          ],
+          "score": 6.16193030660131
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            24500,
+            25000
+          ],
+          "score": 4.389407658853748
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            29500,
+            30000
+          ],
+          "score": 3.4954081182581644
+        },
+        {
+          "file_path": "cuad/THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT.txt",
+          "span": [
+            10750,
+            11250
+          ],
+          "score": 3.422099924217457
+        }
+      ]
+    },
+    {
+      "query": "Consider the Support and Maintenance Agreement between On2 Technologies, Inc. and Wildform, Inc.; Does this contract include any revenue or profit-sharing arrangements?",
+      "answerable": false,
+      "category": "missing_clause",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            19250,
+            19750
+          ],
+          "score": 6.687238753371565
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            18500,
+            19000
+          ],
+          "score": 6.4469723871738935
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            19000,
+            19500
+          ],
+          "score": 5.454749108000451
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            20000,
+            20500
+          ],
+          "score": 5.454749108000451
+        },
+        {
+          "file_path": "cuad/ON2TECHNOLOGIES,INC_11_17_2006-EX-10.3-SUPPORT AND MAINTENANCE AGREEMENT.txt",
+          "span": [
+            18250,
+            18750
+          ],
+          "score": 5.348048106074623
+        }
+      ]
+    },
+    {
+      "query": "Consider the Amendment and Termination of Joint Venture Agreement between Veoneer and Nissin Parties; Until what date does any exclusive arrangement between the parties last?",
+      "answerable": false,
+      "category": "media_question",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            5500,
+            6000
+          ],
+          "score": 3.634280532238841
+        },
+        {
+          "file_path": "cuad/VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            5250,
+            5750
+          ],
+          "score": 3.5341988159394573
+        },
+        {
+          "file_path": "cuad/VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 3.080334623736737
+        },
+        {
+          "file_path": "cuad/VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            500,
+            1000
+          ],
+          "score": 2.448234075790497
+        },
+        {
+          "file_path": "cuad/VEONEER,INC_02_21_2020-EX-10.11-JOINT VENTURE AGREEMENT.txt",
+          "span": [
+            1000,
+            1500
+          ],
+          "score": 2.3517195371376944
+        }
+      ]
+    },
+    {
+      "query": "Consider the Sponsorship Agreement between R. C. Boyd Enterprises, LLC and Cano Petroleum, Inc. for 'Honey Hole'; May the episodes of the show be streamed online or distributed outside the United States?",
+      "answerable": false,
+      "category": "media_question",
+      "abstain": false,
+      "label": "false_answer",
+      "top_passages": [
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            1000,
+            1500
+          ],
+          "score": 16.543428463903677
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            750,
+            1250
+          ],
+          "score": 15.952282919038147
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            1250,
+            1750
+          ],
+          "score": 9.97812849744122
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            2500,
+            3000
+          ],
+          "score": 8.701600495891501
+        },
+        {
+          "file_path": "cuad/CANOPETROLEUM,INC_12_13_2007-EX-10.1-Sponsorship Agreement.txt",
+          "span": [
+            2750,
+            3250
+          ],
+          "score": 8.635758537579237
+        }
+      ]
+    },
+    {
+      "query": "Consider the Co-Branding and Advertising Agreement between i-Escrow, Inc. and 2TheMart.com, Inc.; What is the governing law for this contract?",
+      "answerable": false,
+      "category": "contract_not_indexed",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            25750,
+            26250
+          ],
+          "score": 10.283705478502684
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            26000,
+            26500
+          ],
+          "score": 10.018714981209737
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            16000,
+            16500
+          ],
+          "score": 3.9978681696148852
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            15250,
+            15750
+          ],
+          "score": 3.972938434843522
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            16250,
+            16750
+          ],
+          "score": 3.8762529476861616
+        }
+      ]
+    },
+    {
+      "query": "Consider the Endorsement Agreement between Tom Watson and Adams Golf, Ltd.; What are the audit rights under this contract?",
+      "answerable": false,
+      "category": "contract_not_indexed",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            13250,
+            13750
+          ],
+          "score": 2.702926235838623
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            13000,
+            13500
+          ],
+          "score": 2.6245180922082976
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            2000,
+            2500
+          ],
+          "score": 2.2566893183262735
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            4750,
+            5250
+          ],
+          "score": 1.7087318070997282
+        },
+        {
+          "file_path": "cuad/HOLIDAYRVSUPERSTORESINC_04_15_2002-EX-10.13-ENDORSEMENT AGREEMENT.txt",
+          "span": [
+            1750,
+            2250
+          ],
+          "score": 1.6770580625657372
+        }
+      ]
+    },
+    {
+      "query": "Consider the Co-Production Agreement between Blue Lotus Studios and Harbor Bay Media for the series 'Monsoon Diaries'; How is intellectual property ownership assigned in this contract?",
+      "answerable": false,
+      "category": "contract_not_indexed",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            24750,
+            25250
+          ],
+          "score": 5.865568081019794
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            25000,
+            25500
+          ],
+          "score": 5.4886316858217405
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            24500,
+            25000
+          ],
+          "score": 4.478944664526477
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            16000,
+            16500
+          ],
+          "score": 3.9978681696148852
+        },
+        {
+          "file_path": "cuad/DeltathreeInc_19991102_S-1A_EX-10.19_6227850_EX-10.19_Co-Branding Agreement_ Service Agreement.txt",
+          "span": [
+            15250,
+            15750
+          ],
+          "score": 3.972938434843522
+        }
+      ]
+    },
+    {
+      "query": "Consider the Distribution Agreement between Northwind Broadcasting and Tamarind Digital for cricket highlights; Is there an anti-assignment clause in this contract?",
+      "answerable": false,
+      "category": "contract_not_indexed",
+      "abstain": true,
+      "label": "correct_abstain",
+      "top_passages": [
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14500,
+            15000
+          ],
+          "score": 4.104284154946938
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            12500,
+            13000
+          ],
+          "score": 2.9892974507307115
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            12250,
+            12750
+          ],
+          "score": 2.9635044731648974
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14750,
+            15250
+          ],
+          "score": 2.9381527942649326
+        },
+        {
+          "file_path": "cuad/PcquoteComInc_19990721_S-1A_EX-10.11_6377149_EX-10.11_Co-Branding Agreement1.txt",
+          "span": [
+            14250,
+            14750
+          ],
+          "score": 2.913231184655926
+        }
+      ]
+    }
+  ]
+}
