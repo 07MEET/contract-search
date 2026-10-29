@@ -54,3 +54,11 @@ class Pipeline:
     def text(self, passage: dict) -> str:
         start, end = passage["span"]
         return self.corpus[passage["file_path"]][start:end]
+
+
+def load_pipeline(config_path: str | Path) -> Pipeline:
+    """Load the corpus and build the pipeline a config describes (used by the CLI and app)."""
+    from clausesearch.data import load
+
+    _, corpus = load()
+    return Pipeline(load_config(config_path), corpus)
