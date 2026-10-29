@@ -36,6 +36,8 @@ python scripts/download_data.py
 
 The download fetches only `benchmarks/cuad.json` and `corpus/cuad/` from the [LegalBench-RAG mirror](https://huggingface.co/datasets/awinml/legalbench-rag), pinned to one dataset revision, into `data/` (gitignored). All other commands run from the repository root with the venv active.
 
+**Windows note:** clone into a short path such as `D:\cs`. Streamlit installs files with very long paths, and `pip install` fails with `OSError: [Errno 2] No such file or directory` when the full path exceeds Windows' 260-character limit, unless [long path support](https://pip.pypa.io/warnings/enable-long-paths) is enabled.
+
 ## How to run
 
 | Task | Command |
@@ -115,5 +117,4 @@ Where the brief was unclear, these are the decisions taken and why.
 ## AI tool usage
 
 - **Claude Code (Anthropic), in the Claude desktop app**, was used throughout as a pair programmer. It read the brief, the dataset card, the LegalBench-RAG paper and the authors' scoring code, and summarised them. It proposed the plan and wrote most of the code, the tests, `REPORT.md` and this README. It also ran the commands, checked intermediate results (offset checks, sanity runs with known scores), and found and fixed bugs in the loop, which are recorded in the log and the report.
-- **My role:** I directed each step and approved the plan and objective. I reviewed and approved the unanswerable set before freezing it, chose the STAIR-inspired stretch goal, tested the CLI and web app by hand with known-answer queries, and reviewed the report. I can explain and modify every part of the code.
-- **No LLM is used inside the system** (see REPORT §3).
+- **No LLM is used inside the system** (see [REPORT.md](REPORT.md)).
