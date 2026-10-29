@@ -1,0 +1,14 @@
+# Downloaded by scripts/download_data.py, not committed
+data/
+
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets
+.env
+.streamlit/secrets.toml
+
+# Keep any PDF (including the assignment brief) out of the repo
+*.pdf
