@@ -6,6 +6,7 @@ config leaves out default to the baseline behaviour.
 """
 
 import re
+from bisect import bisect_right
 from pathlib import Path
 
 import snowballstemmer
@@ -40,6 +41,55 @@ def tokenize(text: str, stem: bool = False, stopwords: bool = False) -> list[str
     return STEMMER.stemWords(tokens) if stem else tokens
 
 
+# A heading starts a line or follows a run of 3+ spaces: optional "Section"/"Article", an optional
+# number (9, 5.1, 22, II), then a short title (optionally in brackets) ending in "." / ":" or the
+# end of the line. Seen in the corpus: "9. Term and Renewal.", "22 JURISDICTION AND CHOICE OF LAW",
+# "     7. NON-COMPETITION.", "ARTICLE II  DUTIES OF AGENT", "Section 9.11 [Governing Law]."
+HEADING = re.compile(
+    # Each part starts on a non-space character, so runs of spaces can only be matched one way
+    # (overlapping optional space patterns made the regex engine backtrack for minutes).
+    r"(?:^|(?<=\s{3}))(?=\S)\"?(?:(?:section|article) +)?"
+    r"(?:(?P<num>\d+(?:\.\d+)*\.?|(?-i:[IVX]+)\.?) +)?"
+    r"\[?(?P<title>[^\s.:\[\]][^.:\n\[\]]{2,59}?)\]?(?:[.:]|$)",
+    re.MULTILINE | re.IGNORECASE,
+)
+SMALL_WORDS = frozenset("a an and as at by for in of on or the to with".split())
+PREAMBLE_WORDS = frozenset("and between by exhibit now recitals therefore whereas witnesseth".split())
+
+
+def _is_title(text: str) -> bool:
+    words = text.split()
+    return (1 <= len(words) <= 8 and any(w.lower() not in SMALL_WORDS for w in words)
+            and all(w[0].isupper() or w.lower() in SMALL_WORDS for w in words))
+
+
+def find_headings(text: str) -> list[tuple[int, str]]:
+    """Section headings as (start offset, path), e.g. (812, "INTELLECTUAL PROPERTY / ISA's Intellectual Property").
+
+    A lightweight stand-in for a table of contents (the idea behind STAIR, arXiv 2609.03874):
+    numbered headings nest by their depth (5 > 5.1), unnumbered ALL-CAPS headings are top level.
+    """
+    headings, stack = [], []  # stack holds (depth, title) of the open sections
+    for m in HEADING.finditer(text):
+        number, title = m.group("num"), m.group("title").strip()
+        at_line_start = m.start() == 0 or text[m.start() - 1] == "\n"
+        if not _is_title(title) or all(w.lower() in PREAMBLE_WORDS for w in title.split()):
+            continue
+        # Unnumbered headings must be ALL CAPS on their own line; mid-line ones must be numbered.
+        if not (number or (title.isupper() and at_line_start)) or not (number or at_line_start):
+            continue
+        depth = number.rstrip(".").count(".") + 1 if number and number[0].isdigit() else 1
+        stack = [(d, t) for d, t in stack if d < depth] + [(depth, title)]
+        headings.append((m.start(), " / ".join(t for _, t in stack)))
+    return headings
+
+
+def section_at(headings: list[tuple[int, str]], position: int) -> str:
+    """Path of the section that contains `position` ('' before the first heading)."""
+    i = bisect_right([pos for pos, _ in headings], position) - 1
+    return headings[i][1] if i >= 0 else ""
+
+
 def split_query(query: str) -> tuple[str, str]:
     """'Consider the <contract>; <question>' -> (contract description, question)."""
     if ";" in query:
@@ -62,7 +112,15 @@ class Pipeline:
             for file_path, text in corpus.items()
             for span in chunk_fixed(text, chunking["size"], chunking.get("overlap", 0))
         ]
-        self.bm25 = BM25Okapi([self._tok(corpus[fp][s:e]) for fp, (s, e) in self.chunks])
+        # Section path of each chunk; indexed with the chunk when section_headings is on.
+        # Only the indexed text changes: returned spans are still the chunk's own offsets.
+        headings = {fp: find_headings(text) for fp, text in corpus.items()}
+        self.sections = [section_at(headings[fp], s) for fp, (s, _) in self.chunks]
+        with_headings = config.get("section_headings", False)
+        self.bm25 = BM25Okapi([
+            self._tok((self.sections[i] + "\n" if with_headings else "") + corpus[fp][s:e])
+            for i, (fp, (s, e)) in enumerate(self.chunks)
+        ])
 
         self.route = config.get("route_by_title", False)
         if self.route:
@@ -90,7 +148,8 @@ class Pipeline:
         scores = self.bm25.get_scores(self._tok(search_text))
         ranked = sorted(candidates, key=lambda i: -scores[i])[: self.config["top_k"]]
         passages = [
-            {"file_path": self.chunks[i][0], "span": self.chunks[i][1], "score": float(scores[i])}
+            {"file_path": self.chunks[i][0], "span": self.chunks[i][1], "score": float(scores[i]),
+             "section": self.sections[i]}
             for i in ranked
         ]
         best_score = passages[0]["score"] if passages else 0.0

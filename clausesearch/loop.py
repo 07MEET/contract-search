@@ -169,6 +169,17 @@ def rule_stopwords(config, d, _):
             "information but still add to BM25 scores. Drop them.", "retrieval")
 
 
+def rule_section_headings(config, d, _):
+    # Stretch goal, inspired by STAIR (arXiv 2609.03874): use document structure, not just chunks.
+    if config.get("section_headings") or d["share"]["wrong_section"] < 0.2:
+        return None
+    return ({"section_headings": True},
+            f"{d['share']['wrong_section']:.0%} of answerable queries still reach the right contract but the "
+            "wrong section, and many clauses sit under a heading that names their topic ('Governing Law', "
+            "'Audits'). Index each chunk with its detected section-heading path (a regex-built table of "
+            "contents, after STAIR), keeping the chunk's own offsets.", "retrieval")
+
+
 def rule_calibrate_abstention(config, d, scores):
     """Parameter search: thresholds that maximise correct abstention within the false-abstention limit."""
     if not d["false_answers"]:
@@ -207,7 +218,7 @@ def midpoints(values):
 
 
 RULES = [rule_route_by_title, rule_stem, rule_smaller_chunks, rule_overlap,
-         rule_larger_chunks, rule_stopwords, rule_calibrate_abstention]
+         rule_larger_chunks, rule_stopwords, rule_section_headings, rule_calibrate_abstention]
 
 
 def threshold_scores(pipeline, queries, unanswerable, objective):

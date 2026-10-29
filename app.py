@@ -46,6 +46,8 @@ if question:
             text = pipeline.corpus[p["file_path"]]
             with st.container(border=True):
                 st.markdown(f"**#{rank}** · `{p['file_path']}` · characters {start}–{end} · score {p['score']:.2f}")
+                if p.get("section"):
+                    st.caption(f"Section: {p['section']}")
                 st.write(text[start:end])
                 with st.expander("Show surrounding text"):
                     st.text(text[max(0, start - CONTEXT_CHARS) : end + CONTEXT_CHARS])

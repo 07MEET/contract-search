@@ -32,6 +32,8 @@ def main(argv=None):
     for rank, p in enumerate(passages, 1):
         start, end = p["span"]
         print(f"\n#{rank}  {p['file_path']}  [{start}:{end}]  score {p['score']:.2f}")
+        if p.get("section"):
+            print(f"    section: {p['section']}")
         print(re.sub(r"\s+", " ", pipeline.text(p)).strip())
 
 
