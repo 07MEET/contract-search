@@ -1,0 +1,8 @@
+# Simplest reasonable pipeline: every later result is compared against this.
+chunking:
+  size: 500      # characters, as in the LegalBench-RAG paper's naive baseline
+  overlap: 0
+retriever: bm25  # keyword search over all indexed contracts
+top_k: 64        # passages returned per query (the largest k we score)
+abstain:
+  min_score: 0.0 # say "no relevant clause" only when the best BM25 score is <= this

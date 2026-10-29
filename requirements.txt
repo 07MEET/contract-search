@@ -1,2 +1,5 @@
 huggingface_hub==2.4.0
 pytest==9.2.0
+PyYAML==6.0.3
+rank-bm25==0.2.2
+numpy==2.5.4

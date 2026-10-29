@@ -166,3 +166,38 @@ def save_run(result: dict, runs_dir: Path = RUNS_DIR) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(result, indent=2), encoding="utf-8")
     return path
+
+
+def format_summary(s: dict) -> str:
+    r, e = s["retrieval_only"], s["end_to_end"]
+    lines = [
+        f"config={s['config']} split={s['split']} answerable={s['n_answerable']} unanswerable={s['n_unanswerable']}",
+        "k            " + "".join(f"{k:>8}" for k in K_VALUES),
+        "precision    " + "".join(f"{r['precision'][k]:8.3f}" for k in K_VALUES),
+        "recall       " + "".join(f"{r['recall'][k]:8.3f}" for k in K_VALUES),
+        "recall (e2e) " + "".join(f"{e['recall'][k]:8.3f}" for k in K_VALUES),
+        "budget chars " + "".join(f"{b:>8}" for b in BUDGETS),
+        "recall       " + "".join(f"{r['budget_recall'][b]:8.3f}" for b in BUDGETS),
+        f"false abstain rate {s['false_abstain_rate']:.3f}   correct abstain rate "
+        + (f"{s['correct_abstain_rate']:.3f}" if s["correct_abstain_rate"] is not None else "n/a"),
+        f"labels @k={s['label_k']}: {s['labels']}",
+    ]
+    return "\n".join(lines)
+
+
+if __name__ == "__main__":
+    import argparse
+
+    from clausesearch.data import load
+    from clausesearch.retrieve import Pipeline, load_config
+
+    parser = argparse.ArgumentParser(description="Evaluate a pipeline config on one split.")
+    parser.add_argument("--config", required=True)
+    parser.add_argument("--split", choices=["train", "test"], default="train")
+    args = parser.parse_args()
+
+    config = load_config(args.config)
+    queries, corpus = load()
+    result = evaluate(Pipeline(config, corpus), queries, load_unanswerable(), args.split, config_name=config["name"])
+    print(format_summary(result["summary"]))
+    print(f"saved {save_run(result)}")
