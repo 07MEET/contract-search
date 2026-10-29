@@ -17,6 +17,13 @@ acceptance:
   bootstrap_resamples: 1000 # paired bootstrap over train queries
   bootstrap_win_rate: 0.90  # candidate must be ahead in at least 90% of resamples
 
+calibration:
+  # Abstention thresholds do not change the ranked list, so the primary metric cannot
+  # move when only a threshold changes. Such a change is judged on abstention instead:
+  # accepted if correct abstention rises by at least this much, the primary does not
+  # fall, and every guardrail holds. (Added before the loop's first run.)
+  min_correct_abstain_gain: 0.05
+
 guardrails:
   # Wrongly saying "no clause" on a real question is the worst error for a legal user.
   max_false_abstain_rate: 0.10
