@@ -205,8 +205,15 @@ if __name__ == "__main__":
     parser.add_argument("--split", choices=["train", "test"], default="train")
     args = parser.parse_args()
 
+    import time
+
     config = load_config(args.config)
     queries, corpus = load()
-    result = evaluate(Pipeline(config, corpus), queries, load_unanswerable(), args.split, config_name=config["name"])
-    print(format_summary(result["summary"]))
+    pipeline = Pipeline(config, corpus)
+    start = time.perf_counter()
+    result = evaluate(pipeline, queries, load_unanswerable(), args.split, config_name=config["name"])
+    s = result["summary"]
+    s["seconds_per_query"] = (time.perf_counter() - start) / (s["n_answerable"] + s["n_unanswerable"])
+    print(format_summary(s))
+    print(f"seconds per query: {s['seconds_per_query']:.4f}")
     print(f"saved {save_run(result)}")
