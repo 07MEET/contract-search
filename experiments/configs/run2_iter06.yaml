@@ -1,0 +1,12 @@
+chunking:
+  size: 500
+  overlap: 250
+retriever: bm25
+top_k: 64
+abstain:
+  min_score: 2.9509
+  route_min_score: 22.4448
+name: run2_iter06
+route_by_title: true
+stem: true
+stopwords: true

@@ -106,6 +106,7 @@ def diagnose(result, queries):
         "n_answerable": n,
         "share": {k: labels.get(k, 0) / n for k in ("wrong_document", "wrong_section", "partial_span", "hit")},
         "not_in_top64": sum(r["first_hit_rank"] is None for r in answerable) / n,
+        "not_in_top8": sum(r["first_hit_rank"] is None or r["first_hit_rank"] > 8 for r in answerable) / n,
         "false_answers": labels.get("false_answer", 0),
         "median_gold_chars": median(s["span"][1] - s["span"][0] for q in queries for s in q["snippets"]),
     }
@@ -124,10 +125,11 @@ def rule_route_by_title(config, d, _):
 
 
 def rule_stem(config, d, _):
-    if config.get("stem") or d["not_in_top64"] < 0.1:
+    # Run 1 triggered on "not in top 64", which routing made rare; ranking too low is the symptom.
+    if config.get("stem") or d["not_in_top8"] < 0.2:
         return None
     return ({"stem": True},
-            f"{d['not_in_top64']:.0%} of answerable queries have no relevant passage in the top 64; the error "
+            f"{d['not_in_top8']:.0%} of answerable queries have no relevant passage in the top 8; the error "
             "report shows word-form mismatches (query 'expiration', clause 'expire'). Stem all tokens.",
             "retrieval")
 
@@ -245,11 +247,15 @@ def main():
     unanswerable = [u for u in load_unanswerable() if u["split"] == "train"]
     resamples = objective["acceptance"]["bootstrap_resamples"]
 
+    # Each loop run is appended under a new run number, so earlier runs stay in the log.
+    previous = [json.loads(line) for line in LOG.read_text(encoding="utf-8").splitlines()] if LOG.exists() else []
+    run_id = 1 + max((entry.get("run", 1) for entry in previous), default=0)
+
     current = load_config(BASELINE)
     pipeline, current_result = run(current, corpus, queries, unanswerable)
     current_metrics = metrics(current_result)
     log = [{
-        "iteration": 0, "time": datetime.now().isoformat(timespec="seconds"), "proposer": "human",
+        "run": run_id, "iteration": 0, "time": datetime.now().isoformat(timespec="seconds"), "proposer": "human",
         "change": "baseline", "reason": "simplest reasonable pipeline", "config": current,
         "metrics": current_metrics, "decision": "baseline",
     }]
@@ -274,7 +280,7 @@ def main():
         rule_name, change, reason, kind = proposal
         fired.add(rule_name)
         candidate = merge(current, change)
-        candidate["name"] = f"iter_{iteration:02d}"
+        candidate["name"] = f"run{run_id}_iter{iteration:02d}"
         tried.add(canonical(candidate))
         cand_pipeline, cand_result = run(candidate, corpus, queries, unanswerable)
         cand_metrics = metrics(cand_result)
@@ -288,7 +294,7 @@ def main():
         (ITERATION_CONFIGS / f"{candidate['name']}.yaml").write_text(
             yaml.safe_dump(candidate, sort_keys=False), encoding="utf-8")
         log.append({
-            "iteration": iteration, "time": datetime.now().isoformat(timespec="seconds"),
+            "run": run_id, "iteration": iteration, "time": datetime.now().isoformat(timespec="seconds"),
             "proposer": f"rule:{rule_name}", "kind": kind, "change": change, "reason": reason,
             "diagnosis": {"labels": diagnosis["labels"], "not_in_top64": round(diagnosis["not_in_top64"], 3)},
             "metrics_before": current_metrics, "metrics": cand_metrics, "bootstrap_win_rate": win_rate,
@@ -302,7 +308,8 @@ def main():
             current, pipeline, current_result, current_metrics = candidate, cand_pipeline, cand_result, cand_metrics
 
     LOG.parent.mkdir(parents=True, exist_ok=True)
-    LOG.write_text("".join(json.dumps(entry) + "\n" for entry in log), encoding="utf-8")
+    with LOG.open("a", encoding="utf-8") as fh:
+        fh.writelines(json.dumps(entry) + "\n" for entry in log)
     final = {**current, "name": "final"}
     FINAL.write_text(f"# Written by clausesearch.loop from {current['name']}.\n"
                      + yaml.safe_dump(final, sort_keys=False), encoding="utf-8")

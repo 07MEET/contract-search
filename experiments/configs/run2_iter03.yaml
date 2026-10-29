@@ -1,0 +1,10 @@
+chunking:
+  size: 250
+  overlap: 0
+retriever: bm25
+top_k: 64
+abstain:
+  min_score: 0.0
+name: run2_iter03
+route_by_title: true
+stem: true
