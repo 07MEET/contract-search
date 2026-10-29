@@ -1,0 +1,10 @@
+chunking:
+  size: 500
+  overlap: 0
+retriever: bm25
+top_k: 64
+abstain:
+  min_score: 6.7274
+  route_min_score: 24.9608
+name: iter_06
+route_by_title: true

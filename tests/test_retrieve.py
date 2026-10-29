@@ -1,4 +1,4 @@
-from clausesearch.retrieve import Pipeline, chunk_fixed
+from clausesearch.retrieve import Pipeline, chunk_fixed, split_query, tokenize
 
 CONFIG = {"chunking": {"size": 40, "overlap": 0}, "top_k": 3, "abstain": {"min_score": 0.0}}
 CORPUS = {
@@ -31,3 +31,30 @@ def test_returns_ranked_passages_from_the_right_contract():
 
 def test_abstains_when_nothing_matches():
     assert Pipeline(CONFIG, CORPUS)("zebra giraffe")["abstain"]
+
+
+def test_split_query():
+    assert split_query("Consider the X Agreement; What is the governing law?") == (
+        "Consider the X Agreement", "What is the governing law?")
+    assert split_query("What is the governing law?") == ("", "What is the governing law?")
+
+
+def test_stemming_matches_word_forms():
+    assert tokenize("expiration expire expires", stem=True)[1:] == tokenize("expire expires", stem=True)
+    assert tokenize("Is there a cap on liability", stopwords=True) == ["cap", "liability"]
+
+
+def test_routing_searches_only_the_named_contract():
+    corpus = {
+        "cuad/acme.txt": "SUPPLY AGREEMENT between Acme Corp and Beta LLC. " + "filler text " * 20
+                         + "This Agreement is governed by the laws of Texas.",
+        "cuad/zeta.txt": "LICENSE AGREEMENT between Zeta Inc and Omega Ltd. " + "filler text " * 20
+                         + "This Agreement is governed by the laws of Ohio.",
+        # BM25 gives zero weight to a word found in half the documents, so use 3+ contracts.
+        "cuad/kappa.txt": "SERVICE AGREEMENT between Kappa Co and Sigma plc. " + "filler text " * 20
+                          + "This Agreement is governed by the laws of Utah.",
+    }
+    config = {**CONFIG, "chunking": {"size": 60, "overlap": 0}, "route_by_title": True}
+    result = Pipeline(config, corpus)("Consider the License Agreement between Zeta Inc and Omega Ltd; What is the governing law?")
+    assert {p["file_path"] for p in result["passages"]} == {"cuad/zeta.txt"}
+    assert result["route_score"] > 0

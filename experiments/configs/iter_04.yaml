@@ -1,0 +1,9 @@
+chunking:
+  size: 1000
+  overlap: 0
+retriever: bm25
+top_k: 64
+abstain:
+  min_score: 0.0
+name: iter_04
+route_by_title: true
