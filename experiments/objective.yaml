@@ -1,0 +1,28 @@
+# Objective for the improvement loop. Fixed before any iteration was run;
+# the loop reads these values, and every accept/reject decision follows them.
+# All of it is measured on the train split only (140 answerable, 29 unanswerable).
+
+primary:
+  # Recall at a 2,000-character reading budget, retrieval-only.
+  # Recall: for a legal user, missing the clause is worse than reading extra text.
+  # Budget: holds the amount of text fixed, so a change cannot score better just by
+  #   returning longer chunks (P@k / R@k count chunks, not characters).
+  # 2,000 chars: about half a page, a realistic amount to read, and wide enough
+  #   that multi-part answers (27% of queries) can be covered.
+  metric: budget_recall_2000
+
+acceptance:
+  # Train has only 140 answerable queries, so small differences can be noise.
+  min_gain: 0.01            # primary must rise by at least this much (absolute)
+  bootstrap_resamples: 1000 # paired bootstrap over train queries
+  bootstrap_win_rate: 0.90  # candidate must be ahead in at least 90% of resamples
+
+guardrails:
+  # Wrongly saying "no clause" on a real question is the worst error for a legal user.
+  max_false_abstain_rate: 0.10
+  # Keep the "says so when nothing answers" behaviour once it exists.
+  max_correct_abstain_drop: 0.05   # vs the current accepted config
+  # A change should not spread the answer across more text.
+  max_budget_recall_500_drop: 0.02 # vs the current accepted config
+  # The demo has to feel interactive.
+  max_seconds_per_query: 1.0
