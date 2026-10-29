@@ -21,6 +21,7 @@ RUNS_DIR = REPO / "runs"
 K_VALUES = (1, 2, 4, 8, 16, 32, 64)
 BUDGETS = (500, 1000, 2000, 4000)  # characters
 HIT_RECALL = 0.5  # a query counts as a "hit" when at least half its gold text is covered
+N_SAVED_PASSAGES = 5  # top passages kept per row for error analysis
 
 
 def load_unanswerable(path: Path = UNANSWERABLE_PATH) -> list[dict]:
@@ -95,6 +96,11 @@ def first_hit_rank(passages: list[dict], gold: list[dict]) -> int | None:
     return None
 
 
+def _offsets(items: list[dict]) -> list[dict]:
+    """Offsets only (no text) so run files stay small; text is recoverable from the corpus."""
+    return [{k: item[k] for k in ("file_path", "span", "score") if k in item} for item in items]
+
+
 def evaluate(system, queries, unanswerable, split, label_k=8, config_name="unnamed", test_log=TEST_RUN_LOG):
     """Run `system` on one split and return summary metrics plus one row per query."""
     queries = [q for q in queries if q["split"] == split]
@@ -114,15 +120,18 @@ def evaluate(system, queries, unanswerable, split, label_k=8, config_name="unnam
             "precision": {k: p for k, (p, _) in pr.items()},
             "recall": {k: r for k, (_, r) in pr.items()},
             "budget_recall": {b: precision_recall(clip_to_budget(passages, b), gold)[1] for b in BUDGETS},
+            "gold": _offsets(gold),
+            "top_passages": _offsets(passages[:N_SAVED_PASSAGES]),
         })
     for u in unanswerable:
-        abstain = system(u["query"])["abstain"]
+        result = system(u["query"])
         rows.append({
             "query": u["query"],
             "answerable": False,
             "category": u["category"],
-            "abstain": abstain,
-            "label": "correct_abstain" if abstain else "false_answer",
+            "abstain": result["abstain"],
+            "label": "correct_abstain" if result["abstain"] else "false_answer",
+            "top_passages": _offsets(result["passages"][:N_SAVED_PASSAGES]),
         })
 
     answerable = [r for r in rows if r["answerable"]]

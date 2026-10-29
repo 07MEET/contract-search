@@ -75,6 +75,9 @@ def test_evaluate_scores_abstention_both_ways(tmp_path):
     assert s["correct_abstain_rate"] == 0.5
     assert s["labels"] == {"hit": 1, "false_abstain": 1, "correct_abstain": 1, "false_answer": 1}
     assert len(log.read_text(encoding="utf-8").splitlines()) == 1  # every test-split run is logged
+    q1_row = result["rows"][0]
+    assert q1_row["gold"] == [{"file_path": "cuad/a.txt", "span": (100, 500), "score": 1.0}]
+    assert q1_row["top_passages"] == [{"file_path": "cuad/a.txt", "span": (100, 500), "score": 1.0}]
 
 
 def test_train_runs_are_not_logged(tmp_path):
